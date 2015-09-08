@@ -24,9 +24,9 @@ import io.netty.handler.codec.http.DefaultFullHttpResponse;
 import io.netty.handler.codec.http.FullHttpRequest;
 import io.netty.handler.codec.http.FullHttpResponse;
 import io.netty.handler.codec.http.HttpHeaderNames;
-import io.netty.handler.codec.http.HttpHeaderUtil;
 import io.netty.handler.codec.http.HttpHeaderValues;
 import io.netty.handler.codec.http.HttpResponseStatus;
+import io.netty.handler.codec.http.HttpUtil;
 import io.netty.handler.codec.http.HttpVersion;
 import io.netty.handler.codec.http.cookie.Cookie;
 import io.netty.handler.codec.http.cookie.ServerCookieDecoder;
@@ -56,7 +56,7 @@ public class InfoGen_ServerHandler extends SimpleChannelInboundHandler<FullHttpR
 		// 通常要POST的数据大于1024字节的时候,会分为俩步,
 		// 1. 发送一个请求, 包含一个Expect:100-continue, 询问Server使用愿意接受数据
 		// 2. 接收到Server返回的100-continue应答以后, 才把数据POST给Server
-		if (HttpHeaderUtil.is100ContinueExpected(request)) {
+		if (HttpUtil.is100ContinueExpected(request)) {
 			ctx.write(createEmptyHttpResponse(request, HttpResponseStatus.CONTINUE));
 		}
 		// 参数是否符合规范
@@ -106,7 +106,7 @@ public class InfoGen_ServerHandler extends SimpleChannelInboundHandler<FullHttpR
 			}
 		}
 
-		boolean keepAlive = HttpHeaderUtil.isKeepAlive(request);
+		boolean keepAlive = HttpUtil.isKeepAlive(request);
 		if (keepAlive) {
 			response.headers().set(HttpHeaderNames.CONNECTION, HttpHeaderValues.KEEP_ALIVE);
 			ctx.write(response);
