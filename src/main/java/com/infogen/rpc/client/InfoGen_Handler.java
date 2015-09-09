@@ -3,7 +3,7 @@ package com.infogen.rpc.client;
 import org.apache.log4j.Logger;
 
 import com.google.protobuf.InvalidProtocolBufferException;
-import com.infogen.core.util.map.LRULinkedHashMap;
+import com.infogen.core.structure.map.LRULinkedHashMap;
 import com.infogen.rpc.header.X_HttpHeaderNames;
 
 import io.netty.buffer.ByteBuf;

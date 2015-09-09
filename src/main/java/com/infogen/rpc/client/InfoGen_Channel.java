@@ -13,7 +13,7 @@ import com.google.protobuf.RpcChannel;
 import com.google.protobuf.RpcController;
 import com.google.protobuf.ServiceException;
 import com.infogen.core.exception.Timeout_Exception;
-import com.infogen.core.util.map.LRULinkedHashMap;
+import com.infogen.core.structure.map.LRULinkedHashMap;
 import com.infogen.rpc.InfoGen_Controller;
 import com.infogen.rpc.callback.InfoGen_Callback;
 import com.infogen.rpc.header.X_HttpHeaderNames;
