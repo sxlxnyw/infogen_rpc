@@ -3,7 +3,8 @@ package com.infogen.rpc.client;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicReference;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.google.protobuf.BlockingRpcChannel;
 import com.google.protobuf.Descriptors.MethodDescriptor;
@@ -43,7 +44,7 @@ import io.netty.handler.codec.http.HttpVersion;
  * @version 1.0
  */
 public class InfoGen_Channel implements BlockingRpcChannel, RpcChannel {
-	private static final Logger LOGGER = Logger.getLogger(InfoGen_Channel.class.getName());
+	private static final Logger LOGGER = LogManager.getLogger(InfoGen_Channel.class.getName());
 	public static Integer socket_timeout = 30_000;// 数据传输时间
 	public static Integer connect_timeout = 3_000;// 连接时间
 

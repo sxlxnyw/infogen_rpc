@@ -3,7 +3,8 @@ package com.infogen.rpc;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.google.protobuf.RpcCallback;
 import com.google.protobuf.RpcController;
@@ -15,7 +16,7 @@ import com.google.protobuf.RpcController;
  * @version 1.0
  */
 public class InfoGen_Controller implements RpcController {
-	private static final Logger LOGGER = Logger.getLogger(InfoGen_Controller.class.getName());
+	private static final Logger LOGGER = LogManager.getLogger(InfoGen_Controller.class.getName());
 	private final AtomicReference<String> reason = new AtomicReference<>();
 	private final AtomicBoolean failed = new AtomicBoolean();
 	private final AtomicBoolean canceled = new AtomicBoolean();

@@ -1,6 +1,7 @@
 package com.infogen.rpc.client;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.infogen.core.structure.map.LRULinkedHashMap;
@@ -21,7 +22,7 @@ import io.netty.handler.codec.http.HttpHeaders;
 import io.netty.handler.codec.http.HttpResponseStatus;
 
 public class InfoGen_Handler extends SimpleChannelInboundHandler<FullHttpResponse> {
-	private static final Logger LOGGER = Logger.getLogger(InfoGen_Handler.class.getName());
+	private static final Logger LOGGER = LogManager.getLogger(InfoGen_Handler.class.getName());
 	private LRULinkedHashMap<Long, SimpleStatus> map;
 
 	public InfoGen_Handler(LRULinkedHashMap<Long, SimpleStatus> map) {
