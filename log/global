@@ -1,0 +1,66 @@
+2015-10-08 20:16:10.630 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x79225fb3] REGISTERED
+2015-10-08 20:16:10.637 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x79225fb3] BIND: 0.0.0.0/0.0.0.0:8080
+2015-10-08 20:16:10.640 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x79225fb3, /0:0:0:0:0:0:0:0:8080] ACTIVE
+2015-10-08 20:17:07.782 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - 
+----------------OUTBOUND--------------------
+SETTINGS: ack=false, settings={}
+------------------------------------
+2015-10-08 20:17:07.791 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - 
+----------------INBOUND--------------------
+SETTINGS: ack=false, settings={}
+------------------------------------
+2015-10-08 20:17:07.792 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - 
+----------------OUTBOUND--------------------
+SETTINGS ack=true
+------------------------------------
+2015-10-08 20:17:07.806 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - 
+----------------INBOUND--------------------
+HEADERS: streamId=1, headers=DefaultHttp2Headers[:status: 200, http-to-http2-upgrade: true], streamDependency=0, weight=16, exclusive=false, padding=0, endStream=true
+------------------------------------
+2015-10-08 20:17:07.818 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - 
+----------------INBOUND--------------------
+SETTINGS ack=true
+------------------------------------
+2015-10-08 20:18:14.591 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - 
+----------------OUTBOUND--------------------
+HEADERS: streamId=3, headers=DefaultHttp2Headers[:path: /wh2015-10-08 20:18:14.604 INFO [nioEventLoopGroup-3-1][Slf4JLogger.java:101] - 
+----------------INBOUND--------------------
+HEADERS: streamId=3, headers=DefaultHttp2Headers[:path: /whatever, :method: GET, :scheme: http, :authori2015-10-08 20:18:19.041 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - 
+----------------INBOUND--------------------
+HEADERS: streamId=3, headers=DefaultHttp2Headers[:status: 200], streamDependency=0, weight=16, exclusive=false, padding=0, endStream=false
+------------------------------------
+-----
+HEADERS: streamId=3, headers=DefaultHttp2Headers[:status: 200], streamDependency=0, weight=16, exclusive=false, padding=0, endStream=false
+------------------------------------
+2015-10-08 20:19:45.767 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x52b2b80b] REGISTERED
+2015-10-08 20:19:45.771 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x52b2b80b] BIND: 0.0.0.0/0.0.0.0:8080
+2015-10-08 20:19:45.775 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x52b2b80b, /0:0:0:0:0:0:0:0:8080] ACTIVE
+2015-10-08 20:19:56.880 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x52b2b80b, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x486c53db, /127.0.0.1:58040 => /127.0.0.1:8080]
+2015-10-08 20:19:56.884 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x52b2b80b, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x4d318f1b, /127.0.0.1:58041 => /127.0.0.1:8080]
+2015-10-08 20:20:37.168 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x52b2b80b, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x6efce109, /127.0.0.1:58048 => /127.0.0.1:8080]
+2015-10-08 20:20:54.760 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x52b2b80b, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xed06bb4a, /127.0.0.1:58049 => /127.0.0.1:8080]
+2015-10-08 20:20:54.761 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x52b2b80b, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x52d950a0, /127.0.0.1:58050 => /127.0.0.1:8080]
+2015-10-08 20:21:23.887 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x52b2b80b, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xd6d76d54, /127.0.0.1:58052 => /127.0.0.1:8080]
+2015-10-08 20:21:23.890 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x52b2b80b, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x3b1eba22, /127.0.0.1:58053 => /127.0.0.1:8080]
+2015-10-08 20:37:41.203 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0xc3e5f911] REGISTERED
+2015-10-08 20:37:41.206 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0xc3e5f911] BIND: 0.0.0.0/0.0.0.0:8080
+2015-10-08 20:37:41.209 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0xc3e5f911, /0:0:0:0:0:0:0:0:8080] ACTIVE
+2015-10-08 20:38:29.229 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0xc3e5f911, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xf675cab9, /127.0.0.1:58188 => /127.0.0.1:8080]
+2015-10-08 20:38:29.233 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0xc3e5f911, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x293254cb, /127.0.0.1:58189 => /127.0.0.1:8080]
+2015-10-08 20:38:29.235 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0xc3e5f911, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x798050fe, /127.0.0.1:58190 => /127.0.0.1:8080]
+2015-10-08 20:40:48.334 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x7bbff29e] REGISTERED
+2015-10-08 20:40:48.337 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x7bbff29e] BIND: 0.0.0.0/0.0.0.0:8080
+2015-10-08 20:40:48.339 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x7bbff29e, /0:0:0:0:0:0:0:0:8080] ACTIVE
+2015-10-08 20:40:52.308 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x7bbff29e, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x9da95fea, /127.0.0.1:58199 => /127.0.0.1:8080]
+2015-10-08 20:40:52.312 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x7bbff29e, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xe6d9256e, /127.0.0.1:58200 => /127.0.0.1:8080]
+2015-10-08 20:40:52.319 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x7bbff29e, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x63fef03c, /127.0.0.1:58201 => /127.0.0.1:8080]
+2015-10-08 20:41:16.945 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x7bbff29e, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xeeec6084, /127.0.0.1:58202 => /127.0.0.1:8080]
+2015-10-08 20:41:16.955 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x7bbff29e, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xd0fd2aec, /127.0.0.1:58203 => /127.0.0.1:8080]
+2015-10-08 20:41:45.127 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x7bbff29e, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x46510259, /127.0.0.1:58205 => /127.0.0.1:8080]
+2015-10-08 20:41:45.136 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0x7bbff29e, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xcf086d0c, /127.0.0.1:58206 => /127.0.0.1:8080]
+2015-10-08 20:42:21.990 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0xac26d64d] REGISTERED
+2015-10-08 20:42:21.993 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0xac26d64d] BIND: 0.0.0.0/0.0.0.0:8080
+2015-10-08 20:42:21.995 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0xac26d64d, /0:0:0:0:0:0:0:0:8080] ACTIVE
+2015-10-08 20:42:26.015 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0xac26d64d, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x819be1b7, /127.0.0.1:58210 => /127.0.0.1:8080]
+2015-10-08 20:42:26.018 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0xac26d64d, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xb06b0cb2, /127.0.0.1:58211 => /127.0.0.1:8080]
+2015-10-08 20:42:26.024 INFO [nioEventLoopGroup-2-1][Slf4JLogger.java:101] - [id: 0xac26d64d, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xe8c1ad22, /127.0.0.1:58212 => /127.0.0.1:8080]

@@ -131,7 +131,7 @@ public class InfoGen_Channel implements BlockingRpcChannel, RpcChannel {
 		SimpleStatus status = new SimpleStatus(controller, responsePrototype, callback);
 		map.put(sequence, status);
 
-		DefaultFullHttpRequest httprequest = new DefaultFullHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.POST, new StringBuilder(method.getService().getFullName()).append("/").append(method.getName()).toString(), Unpooled.copiedBuffer(request.toByteArray()));
+		DefaultFullHttpRequest httprequest = new DefaultFullHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.POST, new StringBuilder("/").append(method.getService().getFullName()).append("/").append(method.getName()).toString(), Unpooled.copiedBuffer(request.toByteArray()));
 		httprequest.headers().set(HttpHeaderNames.CONTENT_TYPE, HttpHeaderValues.TEXT_PLAIN);
 		httprequest.headers().setInt(HttpHeaderNames.CONTENT_LENGTH, httprequest.content().readableBytes());
 		httprequest.headers().set(HttpHeaderNames.CONNECTION, HttpHeaderValues.KEEP_ALIVE);

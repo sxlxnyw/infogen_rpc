@@ -1,4 +1,4 @@
-package com.infogen.rpc;
+package com.infogen.rpc.server;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,12 +12,12 @@ import com.google.protobuf.Descriptors.MethodDescriptor;
 import com.google.protobuf.ExtensionRegistry;
 import com.google.protobuf.Message;
 import com.infogen.core.structure.DefaultEntry;
+import com.infogen.rpc.InfoGen_Controller;
 import com.infogen.rpc.filter.InfoGen_Filter;
 import com.infogen.rpc.header.X_HttpHeaderNames;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelFutureListener;
-import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.DefaultFullHttpResponse;
@@ -32,8 +32,7 @@ import io.netty.handler.codec.http.cookie.Cookie;
 import io.netty.handler.codec.http.cookie.ServerCookieDecoder;
 import io.netty.handler.codec.http.cookie.ServerCookieEncoder;
 
-@Sharable
-public class InfoGen_ServerHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
+public class ServerHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
 	private static final Map<String, DefaultEntry<BlockingService, ExtensionRegistry>> blockingServiceMap = new ConcurrentHashMap<>();
 	private static final List<InfoGen_Filter> filter_list = new ArrayList<>();
 
@@ -61,8 +60,8 @@ public class InfoGen_ServerHandler extends SimpleChannelInboundHandler<FullHttpR
 		}
 		// 参数是否符合规范
 		String[] split = request.uri().split("/");
-		if (split.length < 2) {
-			ctx.writeAndFlush(createEmptyHttpResponse(request, HttpResponseStatus.BAD_REQUEST)).addListener(ChannelFutureListener.CLOSE);
+		if (split.length < 3) {
+			ctx.writeAndFlush(createEmptyHttpResponse(request, HttpResponseStatus.BAD_REQUEST));
 			return;
 		}
 
@@ -74,10 +73,15 @@ public class InfoGen_ServerHandler extends SimpleChannelInboundHandler<FullHttpR
 			}
 		}
 
-		String service_name = split[0];
-		String method_name = split[1];
+		String service_name = split[1];
+		String method_name = split[2];
 
 		Entry<BlockingService, ExtensionRegistry> pair = blockingServiceMap.get(service_name);
+		if (pair == null) {
+			ctx.writeAndFlush(createEmptyHttpResponse(request, HttpResponseStatus.BAD_REQUEST)).addListener(ChannelFutureListener.CLOSE);
+			return;
+		}
+
 		final BlockingService blockingService = pair.getKey();
 		final ExtensionRegistry registry = pair.getValue();
 

@@ -10,6 +10,7 @@ import io.netty.handler.codec.http.HttpHeaderNames;
 import io.netty.handler.codec.http.cookie.Cookie;
 import io.netty.handler.codec.http.cookie.ServerCookieDecoder;
 import io.netty.handler.codec.http.cookie.ServerCookieEncoder;
+import io.netty.util.AsciiString;
 
 /**
  * HTTP上下文相关的基本工具方法
@@ -46,7 +47,7 @@ public class Tool_RPC {
 	 * @return
 	 */
 	public static String get_ip(ChannelHandlerContext ctx, FullHttpRequest request) {
-		String clientIP = request.headers().get("X-Forwarded-For");
+		String clientIP = request.headers().get(new AsciiString("X-Forwarded-For"));
 		if (clientIP == null) {
 			InetSocketAddress insocket = (InetSocketAddress) ctx.channel().remoteAddress();
 			clientIP = insocket.getAddress().getHostAddress();

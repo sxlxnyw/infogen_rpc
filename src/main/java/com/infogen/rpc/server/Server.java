@@ -1,4 +1,4 @@
-package com.infogen.rpc;
+package com.infogen.rpc.server;
 
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -43,6 +43,7 @@ public class Server {
 		server_bootstrap.group(bossGroup, workerGroup);
 		server_bootstrap.channel(NioServerSocketChannel.class);
 		server_bootstrap.handler(new LoggingHandler(LogLevel.INFO));
+
 		server_bootstrap.childHandler(new ChannelInitializer<SocketChannel>() {
 			@Override
 			public void initChannel(SocketChannel ch) {
@@ -57,7 +58,7 @@ public class Server {
 
 				// Filter
 				// 如果不是 @Sharable 的 所以必须每次 new 一个新的
-				p.addLast(new InfoGen_ServerHandler());
+				p.addLast(new ServerHandler());
 			}
 		});
 
@@ -73,12 +74,12 @@ public class Server {
 	}
 
 	public Server add_filter(final InfoGen_Filter filter) {
-		InfoGen_ServerHandler.add_filter(filter);
+		ServerHandler.add_filter(filter);
 		return this;
 	}
 
 	public Server registerService(final BlockingService service) {
-		InfoGen_ServerHandler.registerService(service);
+		ServerHandler.registerService(service);
 		return this;
 	}
 
