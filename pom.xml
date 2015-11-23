@@ -50,7 +50,7 @@
 		<dependency>
 			<groupId>io.netty</groupId>
 			<artifactId>netty-all</artifactId>
-			<version>4.1.0.Beta7</version>
+			<version>4.1.0.Beta8</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.protobuf</groupId>
