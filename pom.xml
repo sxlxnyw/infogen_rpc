@@ -48,10 +48,10 @@
 		</dependency>
 		<!-- rpc -->
 		<dependency>
-			<groupId>io.netty</groupId>
-			<artifactId>netty-all</artifactId>
-			<version>4.1.0.Beta8</version>
-		</dependency>
+	<groupId>io.netty</groupId>
+	<artifactId>netty-all</artifactId>
+	<version>4.1.0.CR7</version>
+</dependency>
 		<dependency>
 			<groupId>com.google.protobuf</groupId>
 			<artifactId>protobuf-java</artifactId>
@@ -61,5 +61,4 @@
 	<build>
 		<finalName>infogen_rpc</finalName>
 	</build>
-
 </project>

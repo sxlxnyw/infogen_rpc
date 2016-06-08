@@ -14,7 +14,7 @@ import com.google.protobuf.RpcCallback;
  * @author larry/larrylv@outlook.com/创建时间 2015年8月3日 上午11:18:34
  * @since 1.0
  * @version 1.0
- * @param <T>
+ * @param <T> 指定类型
  */
 public class InfoGen_Callback<T> implements RpcCallback<T> {
 	private static final Logger LOGGER = LogManager.getLogger(InfoGen_Callback.class.getName());

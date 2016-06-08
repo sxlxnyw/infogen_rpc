@@ -40,12 +40,6 @@ public class Tool_RPC {
 		response.headers().add(HttpHeaderNames.SET_COOKIE, ServerCookieEncoder.STRICT.encode(key, value));
 	}
 
-	/**
-	 * 获取 web 客户端IP
-	 * 
-	 * @param request
-	 * @return
-	 */
 	public static String get_ip(ChannelHandlerContext ctx, FullHttpRequest request) {
 		String clientIP = request.headers().get(new AsciiString("X-Forwarded-For"));
 		if (clientIP == null) {
