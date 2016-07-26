@@ -3,9 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.infogen</groupId>
-		<artifactId>infogen_aggregator</artifactId>
+		<artifactId>infogen_combine</artifactId>
 		<version>V1.0</version>
-		<relativePath>../infogen_aggregator</relativePath>
+		<relativePath>../infogen_combine</relativePath>
 	</parent>
 	<artifactId>infogen_rpc</artifactId>
 	<packaging>jar</packaging>
@@ -50,12 +50,12 @@
 		<dependency>
 	<groupId>io.netty</groupId>
 	<artifactId>netty-all</artifactId>
-	<version>4.1.0.CR7</version>
+	<version>4.1.3.Final</version>
 </dependency>
 		<dependency>
 			<groupId>com.google.protobuf</groupId>
 			<artifactId>protobuf-java</artifactId>
-			<version>3.0.0-beta-1</version>
+			<version>3.0.0-beta-3</version>
 		</dependency>
 	</dependencies>
 	<build>
