@@ -2,15 +2,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.infogen</groupId>
+		<groupId>com.github.infogen7</groupId>
 		<artifactId>infogen_combine</artifactId>
-		<version>V1.0</version>
+		<version>${global.version}</version>
 		<relativePath>../infogen_combine</relativePath>
 	</parent>
 	<artifactId>infogen_rpc</artifactId>
 	<packaging>jar</packaging>
-	<version>${global.version}</version>
-	<name>infogen_rpc</name>
+	<name>${project.groupId}:${project.artifactId}</name>
 	<url>https://github.com/infogen7/infogen_rpc</url>
 	<description>分布式服务框架</description>
 	<issueManagement>
@@ -46,9 +45,9 @@
 	<dependencies>
 		<!-- aop -->
 		<dependency>
-			<groupId>com.infogen</groupId>
+			<groupId>com.github.infogen7</groupId>
 			<artifactId>infogen_core</artifactId>
-			<version>${project.version}</version>
+			<version>${global.version}</version>
 		</dependency>
 		<!-- rpc -->
 		<dependency>
